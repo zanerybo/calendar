@@ -10,7 +10,11 @@ const ReactCalendar = () =>{
   return <div>
     <Calednar onChange={onChange} value={date} />
     {console.log(date)}
-    {date.toString()}
+    {moment(date).format('DD.MM.YYYY')}
+    <input  onInput={OnInputDay} onChange={OnInputDay}/>
+    <input  onInput={OnInputMonth} onChange={OnInputMonth}/>
+    <input  onInput={OnInputYear} onChange={OnInputYear}/>     
+    <input type="submit" value="Установить" onClick={OnClick} onClickCapture={On}/>
   </div>
 };
 
